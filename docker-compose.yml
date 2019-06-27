@@ -1,0 +1,7 @@
+web:
+  image: uniblog:1.0
+  command: ./run-production.sh
+  volumes:
+    - .:/code
+  ports:
+    - "8000:80"

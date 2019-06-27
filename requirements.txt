@@ -1,0 +1,6 @@
+django
+uwsgi
+django-filters
+djangorestframework
+django-rest-registration
+drf-extensions
