@@ -3,24 +3,29 @@ from dateutil.relativedelta import relativedelta
 import django_filters
 from django_filters import rest_framework as filters
 
-from courses import models
+from blog import models
 
-class TeacherFilter(filters.FilterSet):
+
+class BlogFilter(filters.FilterSet):
     name = django_filters.CharFilter(lookup_expr='icontains')
 
     class Meta:
-        model = models.Teacher
+        model = models.Entry
         fields = ['name']
 
 
-class StudentFilter(filters.FilterSet):
-    age = django_filters.NumberFilter(method='age_filter')
-
-    def age_filter(self, queryset, name, value):
-        today = datetime.date.today()
-        age = (today - relativedelta(years=value)).year
-        return queryset.filter(birth_date__year=age)
+class UserFilter(filters.FilterSet):
+    name = django_filters.CharFilter(lookup_expr='icontains')
 
     class Meta:
-        model = models.Student
-        fields = ['age']
+        model = models.Entry
+        fields = ['name']
+
+
+class EntryFilter(filters.FilterSet):
+    headline = django_filters.CharFilter(lookup_expr='icontains')
+
+    class Meta:
+        model = models.Entry
+        fields = ['headline']
+

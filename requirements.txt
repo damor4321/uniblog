@@ -1,6 +1,8 @@
 django
+django-bootstrap4
 uwsgi
-django-filters
 djangorestframework
 django-rest-registration
 drf-extensions
+django-filter
+python-dateutil
