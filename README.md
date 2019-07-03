@@ -18,7 +18,7 @@ La parte consumidora de la api está en "blog" y esta sin hacer.
 
 Se crea la imagen de Docker para el proyecto. La imagen va a contener la instalación de los requerimientos establecidos en el fichero `requirements.txt`.
 
-El fichero `requirements.txt` contiene los requisitos básicos para el inicio y despliegue de una aplicación con Django, si necesita adicionarle nuevos elementos este es un buen momento.
+El fichero `requirements.txt` contiene los requisitos básicos para el inicio y despliegue de una aplicación con Django.
 
 ```
 docker build -t uniblog:1.0 .
